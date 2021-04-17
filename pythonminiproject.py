@@ -14,11 +14,9 @@ def upload():
     ro.geometry("500x350")
     ro.resizable(width=False,height=False)
     menubar = Menu(ro)
-
     file = Menu(menubar, tearoff = 0)
     menubar.add_cascade(label = 'File',menu=file)
     file.add_command(label='Back', command=ro.destroy)
-
     description = Menu(menubar, tearoff=0)
     menubar.add_cascade(label='Project made by', menu = description)
     description.add_command(label = 'CMPN D7A',command=None)
@@ -28,9 +26,8 @@ def upload():
 
     ro.config(menu=menubar)
 
-    myLabel1 = Label(ro, text="Text file to speech conventor", width="50", pady=10, fg="blue", bg="#b8254e", font="bold", anchor="w")
+    myLabel1 = Label(ro, text="Text file to speech conventor", width="50", pady=10, fg="#26001b", bg="#51c4d3", font="bold")
     myLabel1.pack(side=TOP)
-
     def open_txt():
         text_file = filedialog.askopenfilename(initialdir="C:/Users/shubu/Desktop/sem4/python/", title="Open text files", filetypes=(("Text file", "*.txt"), ))
         text_file = open(text_file, 'r')
@@ -81,15 +78,15 @@ description.add_command(label = '72-Shubham Zope-D7A',command=None)
 
 root.config(menu=menubar)
 
-myLabel = Label(root, text="Text to speech conventor", width="50", pady=10, fg="blue", bg="#b8254e", font="bold", anchor="w")
+myLabel = Label(root, text="Text to speech conventor", width="50", pady=10, fg="#26001b", bg="#51c4d3", font="bold")
 myLabel.pack(side=TOP)
     
-label1 = Label(root, text="Enter some text here", anchor="w",width="100", pady=10, fg="red", font=("Arial", 10))
+label1 = Label(root, text="Enter some text here",width="100", pady=10, fg="red", font=("Arial", 10))
 label1.pack()
 TBox = Text(root,height=10,width=300,bg="#d3f2ee")
 TBox.pack()
 
-p1 = PhotoImage(file = 'mic.png')
+p1 = PhotoImage(file = 'miclogo.png')
 root.iconphoto(False, p1)
 
 def speaktext():
